@@ -1,0 +1,14 @@
+services:
+  mongo_database:
+    image: mongo:latest
+    contrainer_name: mongo_database
+    ports:
+    - 27017:27017
+    environment:
+      -MONGO_INITDB_ROOT_USERNAME=nicolecardoso
+     -MONGO_INITDB_ROOT_PASSAWORD=110466
+    volumes:
+     -mongo_volume:/data/db
+     -mongo_volume:/data/configdb
+volumes:
+  mongo_volume:   
